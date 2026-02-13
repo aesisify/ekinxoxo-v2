@@ -92,8 +92,12 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onFileLoad }) => {
               Drag and drop your electrochemical data file here
             </p>
             <p className="text-sm text-gray-500 mb-4">
-              Supports .txt and .csv files
+              Supports .txt files
             </p>
+            <div className="text-xs text-gray-400 bg-gray-50 p-3 rounded-md text-left mb-2">
+              <p className="font-medium mb-2">Required headers (tab-delimited):</p>
+              <p className="font-mono">Potential applied (V), Time (s), WE(1).Current (A), WE(1).Potential (V), Scan, Index, Q+, Q−, Current range</p>
+            </div>
             <input
               type="file"
               accept=".txt,.csv"

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Code, Heart } from 'lucide-react';
 import { FileUploader } from './components/file-uploader';
 import { ElectrochemicalChart, type ChartDataPoint } from './components/electrochemical-chart';
 import { ControlPanel } from './components/control-panel';
@@ -382,6 +383,20 @@ export function App() {
               </>
             )}
           </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="text-center py-3 space-y-1">
+        <p className="text-[11px] text-gray-400">All processing happens in your browser — no data is uploaded or stored.</p>
+        <div className="text-xs flex gap-1 items-center justify-center text-gray-400">
+          <Code className="h-4 w-4" />
+          <span>with</span>
+          <Heart className="h-4 w-4 text-red-500" />
+          <span>by</span>
+          <a href="https://github.com/aesisify/ekinxoxo-v2" target="_blank" className="underline text-indigo-300">Oğuz Gergin</a>
+          <span>and</span>
+          <a href="https://metal-urjia.blogspot.com/" target="_blank" className="underline text-indigo-300">Ekin Metin</a>
         </div>
       </div>
     </div>
